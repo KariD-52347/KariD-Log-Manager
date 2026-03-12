@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uygulama ikonu için özel vektör - tema rengi KULLANILMAZ, sabit renk kullanılır -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Arka plan -->
+    <path
+        android:fillColor="#1E88E5"
+        android:pathData="M0,0 L108,0 L108,108 L0,108 Z" />
+    <!-- Log ikonu (beyaz) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M63,27H36A9,9 0 0,0 27,36V72A9,9 0 0,0 36,81H72A9,9 0 0,0 81,72V45L63,27M72,72H36V36H59L72,49V72M45,63V69H39V63H45M45,57V51H39V57H45M57,63V69H51V63H57M69,63V69H63V63H69M57,57V51H51V57H57" />
+</vector>

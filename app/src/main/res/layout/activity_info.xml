@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- UYGULAMA BAŞLIK BANNER -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp"
+            app:cardBackgroundColor="?attr/colorSurface">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="?attr/colorOnSurface"
+                    android:paddingBottom="4dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_developer"
+                    android:textSize="13sp"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 1. HAKKINDA -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_about_title"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_about_desc"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.5" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 2. READ_LOGS IZIN BİLGİSİ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:strokeColor="?attr/colorOutline"
+            app:strokeWidth="1dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_readlogs_title"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_readlogs_why"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:paddingBottom="12dp" />
+
+                <!-- Yöntem 1: Root -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/perm_root_method_title"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="?attr/colorOnSurface"
+                    android:paddingBottom="4dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_readlogs_root_steps"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:paddingBottom="12dp" />
+
+                <!-- Yöntem 2: ADB -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/perm_adb_method_title"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="?attr/colorOnSurface"
+                    android:paddingBottom="4dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_readlogs_adb_steps"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:paddingBottom="6dp" />
+
+                <!-- ADB kod kutusu -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/bg_code_block"
+                    android:padding="10dp"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_readlogs_adb_command"
+                        android:fontFamily="monospace"
+                        android:textSize="11sp"
+                        android:singleLine="true"
+                        android:scrollHorizontally="true"
+                        android:ellipsize="none"
+                        android:textIsSelectable="true"
+                        android:textColor="?attr/colorOnSurface" />
+                </LinearLayout>
+
+                <!-- Geçerlilik notu -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_readlogs_validity"
+                    android:textSize="12sp"
+                    android:lineSpacingMultiplier="1.4"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:paddingBottom="10dp" />
+
+                <!-- Custom ROM notu - küçük punto -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_readlogs_rom_note"
+                    android:textSize="11sp"
+                    android:lineSpacingMultiplier="1.4"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 3. LOG TURLERİ -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_log_types_title"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_soft_log_desc"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.4"
+                    android:paddingBottom="6dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_normal_log_desc"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.4"
+                    android:paddingBottom="6dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_deep_log_desc"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.4" />
+
+                <!-- TABLO -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_log_table_title"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_log_table_desc"
+                    android:textSize="12sp"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:paddingBottom="12dp" />
+
+                <!-- TABLO BASLIK -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:orientation="horizontal"
+                    android:background="?attr/colorSurfaceVariant"
+                    android:paddingHorizontal="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.8"
+                        android:text="@string/info_table_level" android:textSize="12sp" android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" android:gravity="center_vertical"/>
+                    <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                        android:text="@string/info_table_light" android:textSize="12sp" android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                        android:text="@string/info_table_normal" android:textSize="12sp" android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" android:gravity="center"/>
+                    <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"
+                        android:text="@string/info_table_deep" android:textSize="12sp" android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" android:gravity="center"/>
+                </LinearLayout>
+
+                <include layout="@layout/info_table_row" android:id="@+id/rowFatal"    android:layout_width="match_parent" android:layout_height="32dp"/>
+                <include layout="@layout/info_table_row" android:id="@+id/rowError"    android:layout_width="match_parent" android:layout_height="32dp"/>
+                <include layout="@layout/info_table_row" android:id="@+id/rowWarning"  android:layout_width="match_parent" android:layout_height="32dp"/>
+                <include layout="@layout/info_table_row" android:id="@+id/rowInfo"     android:layout_width="match_parent" android:layout_height="32dp"/>
+                <include layout="@layout/info_table_row" android:id="@+id/rowDebug"    android:layout_width="match_parent" android:layout_height="32dp"/>
+                <include layout="@layout/info_table_row" android:id="@+id/rowVerbose"  android:layout_width="match_parent" android:layout_height="32dp"/>
+                <include layout="@layout/info_table_row" android:id="@+id/rowKernel"   android:layout_width="match_parent" android:layout_height="32dp"/>
+                <include layout="@layout/info_table_row" android:id="@+id/rowSelinux"  android:layout_width="match_parent" android:layout_height="32dp"/>
+                <include layout="@layout/info_table_row" android:id="@+id/rowRootReq"  android:layout_width="match_parent" android:layout_height="32dp"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 4. ADIM ADIM KULLANIM -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_how_to_use_title"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_how_to_use_desc"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.6" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 5. IPUÇLARI -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_ai_data_title"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingBottom="8dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info_ai_data_desc"
+                    android:textSize="13sp"
+                    android:lineSpacingMultiplier="1.5" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <View android:layout_width="match_parent" android:layout_height="32dp" />
+
+    </LinearLayout>
+</ScrollView>

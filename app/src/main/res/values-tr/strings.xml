@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KariD Log Manager</string>
+
+    <!-- İlk Açılış -->
+    <string name="btn_lets_go">Anladım, Başlayalım</string>
+    <string name="welcome_subtitle">Yapay Zeka Destekli Akıllı Log Kaydedici</string>
+    <string name="welcome_purpose_title">Bu Uygulama Ne İşe Yarar?</string>
+    <string name="welcome_purpose_desc">KariD Log Manager, Android cihazınızdaki sistem etkinliklerini kayıt altına alır. Bir uygulama çöktüğünde, telefon donduğunda veya beklenmedik bir hata yaşandığında, kayıt sırasında ne olduğunu sistem logları sayesinde anlayabilirsiniz. Kaydedilen loglar yapay zeka ile analiz edilerek hatanın kök nedeni ve çözüm adımları belirlenir.</string>
+    <string name="welcome_howtouse_title">Nasıl Kullanılır?</string>
+    <string name="welcome_howtouse_desc">1. Önce READ_LOGS iznini verin (Root veya ADB ile).\n2. Ana ekrandan bir kayıt türü seçin ve kayda başlayın.\n3. Uygulamadan çıkıp (arka planda kayıt devam eder) sorunu birkaç kez tekrar edin. (Örneğin açılmayan uygulamayı üç dört defa açmaya çalışın)\n4. Kaydı durdurun - dosya otomatik kaydedilir.\n5. \"Hatayı Yapay Zekaya Sor\" butonuna basın, göndermek istediğiniz log dosyanızı seçin, sorununuzu kısaca açıklayın ve gönderin.\n6. Yapay zekanın sunduğu çözüm adımlarını uygulayın.</string>
+    <string name="welcome_logtypes_title">Log Türleri</string>
+    <string name="welcome_permissions_title">Gerekli İzinler</string>
+    <string name="welcome_permission_file_title">Dosya Erişim İzni (Zorunlu)</string>
+    <string name="welcome_permission_file_desc">Kaydedilen log dosyalarının cihazınıza yazılabilmesi için bir klasör seçmeniz gerekir. Uygulama yalnızca seçtiğiniz klasöre erişir.</string>
+    <string name="welcome_permission_notif_title">Bildirim İzni (Zorunlu)</string>
+    <string name="welcome_permission_notif_desc">Log kaydı arka planda devam ederken bildirim çubuğunda bir durum bildirimi gösterilir. Bu bildirim aracılığıyla kaydı durdurabilirsiniz. Bildirim izni olmadan servis arka planda çalışamaz.</string>
+    <string name="welcome_agree_checkbox">Okudum ve anladım</string>
+    <string name="first_launch_title">"KariD Log Manager\'a Hoş Geldiniz"</string>
+    <string name="first_launch_desc">Bu uygulama, hataları yapay zeka analizi ile teşhis etmek için sistem loglarını kaydeder. Lütfen log dosyalarınızı kaydetmek için bir klasör seçin.</string>
+    <string name="btn_select_folder">Kayıt Klasörü Seç</string>
+    <string name="folder_selected">✓ Klasör Seçildi</string>
+    <string name="btn_file_permission">Dosya İzni Ver</string>
+    <string name="btn_notification_permission">Bildirim İzni Ver</string>
+    <string name="permission_granted">✓ İzin Verildi</string>
+
+    <!-- Log Türleri -->
+    <string name="soft_log_title">Hafif Kayıt</string>
+    <string name="soft_log_desc">Yalnızca hata ve uyarılar. READ_LOGS izni gereklidir.</string>
+    <string name="normal_log_title">Normal Kayıt</string>
+    <string name="normal_log_desc">Standart Logcat kaydı. READ_LOGS izni gereklidir.</string>
+    <string name="deep_log_title">Derin Kayıt</string>
+    <string name="deep_log_desc">Tüm sistem ve çekirdek kayıtları. ROOT izni gereklidir.</string>
+
+    <!-- Ana Ekran -->
+    <string name="btn_soft_log">Hafif Kayıt</string>
+    <string name="btn_normal_log">Normal Kayıt</string>
+    <string name="btn_deep_log">Derin Kayıt</string>
+    <string name="btn_stop_log">Kaydı Durdur</string>
+    <string name="btn_ask_ai">Hatayı Yapay Zekaya Sor</string>
+    <string name="section_log_types">Log Türleri</string>
+    <string name="section_ai_history">YAPAY ZEKA GEÇMİŞİ</string>
+    <string name="ai_col_problem">Problem</string>
+    <string name="ai_col_status">Durum</string>
+    <string name="ai_col_answer">Yanıt</string>
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+
+    <!-- Durum -->
+    <string name="status_idle">Bekleniyor</string>
+    <string name="status_recording">Kaydediliyor...</string>
+
+    <!-- Log Mesajları -->
+    <string name="log_started">kaydı başlatıldı</string>
+    <string name="log_stopped">Kayıt durduruldu ve kaydedildi</string>
+    <string name="log_already_running">Zaten bir kayıt devam ediyor</string>
+    <string name="no_active_log">Aktif kayıt bulunamadı</string>
+    <string name="root_required">READ_LOGS izni gereklidir</string>
+
+    <!-- Deep Log Uyarısı -->
+    <string name="deep_log_warning_title">Derin Kayıt Uyarısı</string>
+    <string name="deep_log_warning_message">Derin Kayıt, tüm sistem ve çekirdek loglarını kaydeder. Bu işlem uzun sürebilir. Devam etmek istiyor musunuz?</string>
+    <string name="btn_continue">Devam Et</string>
+    <string name="btn_cancel">İptal</string>
+
+    <!-- Bildirim -->
+    <string name="notif_channel_name">Log Kayıt Servisi</string>
+    <string name="notif_channel_desc">Log kaydı devam ederken görünür</string>
+    <string name="notif_title">Log Kaydediliyor</string>
+    <string name="notif_running">aktif</string>
+    <string name="notif_stop_button">Kaydı Durdur</string>
+
+    <!-- AI Popup -->
+    <string name="ai_popup_title">Hatayı Yapay Zekaya Sor</string>
+    <string name="ai_problem_label">Sorunu açıklayın</string>
+    <string name="ai_problem_hint">Yaşadığınız sorunu kısaca açıklayın...</string>
+    <string name="ai_send_button">Hatayı Yapay Zekaya Gönder</string>
+    <string name="btn_close">Kapat</string>
+    <string name="btn_copy">Kopyala</string>
+
+    <!-- AI Geçmişi -->
+    <string name="ai_history_title">Yapay Zeka Soru Geçmişi</string>
+    <string name="ai_history_empty">Henüz Yapay Zekaya soru sorulmadı</string>
+    <string name="ai_select_log_file">Kayıt Dosyasını Seçin (Sadece Hafif kayıtlar, Maks. 100 KB)</string>
+    <string name="ai_enter_problem">Lütfen sorunu açıklayın</string>
+    <string name="ai_no_log_file">Log dosyası seçiniz</string>
+    <string name="ai_file_too_large">Dosya boyutu 100 KB limitini asiyor!</string>
+    <string name="btn_send_to_ai">Hatayı Yapay Zekaya Gönder</string>
+    <string name="ai_status_sending">Gönderiliyor...</string>
+    <string name="ai_status_answered">Yanıtlandı</string>
+    <string name="ai_status_waiting">Bekleniyor...</string>
+    <string name="ai_status_error">Hata</string>
+    <string name="ai_answer_title">Yapay Zeka Yanıtı</string>
+    <string name="ai_your_problem">Sorununuz:</string>
+    <string name="ai_waiting_answer">Yapay zeka yanıtı bekleniyor...</string>
+    <string name="ai_view_answer">Yanıtı Gör</string>
+    <string name="ai_copy">Kopyala</string>
+    <string name="ai_copied">Kopyalandı</string>
+
+    <!-- Log Seçici -->
+    <string name="no_logs_found">Geçmiş Log Kaydı bulunamadı. Lütfen önce bir kayıt alın.</string>
+    <string name="log_file_label">Seçilen Dosya:</string>
+    <string name="file_size_label">Boyut:</string>
+    <string name="file_too_large_warning">Dosya 100 KB limitini asiyor!</string>
+
+    <!-- Ayarlar -->
+    <string name="settings_title">Ayarlar</string>
+    <string name="theme_label">Tema:</string>
+    <string name="language_label">Dil:</string>
+    <string name="root_status_label">Root Durumu:</string>
+    <string name="root_available">Root Mevcut</string>
+    <string name="root_not_available">Root Yok</string>
+    <string name="save_folder_label">Kayıt Klasörü:</string>
+    <string name="no_folder_selected">Klasör Seçilmedi</string>
+    <string name="btn_change_folder">Klasör Değiştir</string>
+    <string name="lang_change_restart">Dil değiştirildi. Yeniden başlatılıyor...</string>
+    <string name="settings_theme">Tema</string>
+    <string name="settings_language">Dil</string>
+    <string name="settings_root_status">Root Durumu</string>
+    <string name="settings_save_folder">Kayıt Klasörü</string>
+    <string name="settings_change_folder">Klasör Değiştir</string>
+
+    <!-- Log Geçmişi -->
+    <string name="log_history_title">Log Geçmişi</string>
+    <string name="no_log_history">Geçmiş Log Kaydı bulunamadı</string>
+    <string name="btn_open">Aç</string>
+    <string name="btn_share">Paylaş</string>
+    <string name="share_log">Logu Paylaş</string>
+    <string name="open_with">İle Aç</string>
+
+    <!-- Bilgi Ekranı -->
+    <string name="info_title">Uygulama Hakkında</string>
+    <string name="info_about_title">KariD Log Manager Nedir?</string>
+    <string name="info_about_desc">KariD Log Manager, Android cihazınızdaki sistem etkinliklerini kayıt altına alarak hata anında tam olarak ne olduğunu görmenizi sağlar. Uygulama çöküyor mu? Telefon donuyor mu? Logcat kaydı ile bu sorunların kaynağını kaydedip yapay zeka ile analiz ederek çözüm önerir.</string>
+    <string name="info_purpose_title">Hakkında</string>
+    <string name="info_purpose_desc">Android sistem mesajlarını farklı derinlik seviyelerinde kaydeder, yapay zeka ile analiz edip çözüm önerileri sunar.</string>
+    <string name="info_log_types_title">Log Türleri</string>
+    <string name="info_logtypes_title">Kayıt Modları</string>
+    <string name="info_logtypes_desc">Farklı kayıt modları farklı seviyede girdileri kaydeder.</string>
+    <string name="info_soft_log_desc">Hafif kayıt: Yalnızca hata kayıtlarını kaydeder. Dosya boyutu küçüktür ve yapay zeka analizine en uygun moddur.</string>
+    <string name="info_normal_log_desc">Normal Kayıt: Standart Logcat kaydı. Uygulama davranışlarını ayrıntılı izlemek için kullanılır.</string>
+    <string name="info_deep_log_desc">Derin Kayıt: Tüm sistem ve çekirdek (kernel) loglarını, SELinux kayıtlarını içerir. Donanım veya sistem katmanı sorunlarının tespitinde kullanılır. ROOT yetkisi gerektirir.</string>
+    <string name="info_ai_title">Yapay Zeka Kullanımı</string>
+    <string name="info_ai_data_title">İpuçları &amp; Bilgiler</string>
+    <string name="info_how_to_use_title">Adım Adım Kullanım</string>
+    <string name="info_how_to_use_desc">1. Önce READ_LOGS iznini verin (Root veya ADB ile).\n2. Ana ekrandan bir kayıt türü seçin ve kayda başlayın.\n3. Uygulamadan çıkıp (arka planda kayıt devam eder) sorunu birkaç kez tekrar edin. (Örneğin açılmayan uygulamayı üç dört defa açmaya çalışın)\n4. Kaydı durdurun - dosya otomatik kaydedilir.\n5. \"Hatayı Yapay Zekaya Sor\" butonuna basın, göndermek istediğiniz log dosyanızı seçin, sorununuzu kısaca açıklayın ve gönderin.\n6. Yapay zekanın sunduğu çözüm adımlarını uygulayın.</string>
+    <string name="info_developer">Geliştirici: KariD</string>
+
+    <!-- Genel -->
+    <string name="copied_to_clipboard">Panoya kopyalandı!</string>
+    <string name="ai_clear_history">Geçmişi Temizle</string>
+    <string name="ai_clear_history_title">Yapay Zeka Geçmişini Temizle</string>
+    <string name="ai_clear_history_confirm">Tüm yapay zeka geçmişi silinecek. Emin misiniz?</string>
+    <string name="ai_clear_history_yes">Sil</string>
+
+    <!-- Tablo -->
+    <string name="info_table_level">Seviye</string>
+    <string name="info_table_light">Hafif</string>
+    <string name="info_table_normal">Normal</string>
+    <string name="info_table_deep">Derin</string>
+    <string name="info_table_device">Cihaz Bilgisi</string>
+    <string name="info_table_kernel">Kernel (dmesg)</string>
+    <string name="info_table_selinux">SELinux</string>
+    <string name="info_table_root">READ_LOGS ile</string>
+    <string name="info_table_readlogs">READ_LOGS İzni</string>
+    <string name="info_table_root_req">ROOT Yetkisi</string>
+    <string name="info_log_table_title">Kayıt Türü Karşılaştırma Tablosu</string>
+    <string name="info_log_table_desc">Her kayıt türünde hangi log seviyeleri kaydedilir?</string>
+    <string name="info_deep_root_note">Hafif ve Normal kayıt için READ_LOGS izni yeterlidir. Derin kayıttaki SELinux ve Kernel kayıtları için ROOT yetkisi gereklidir.</string>
+
+    <!-- İzin Diyaloğu -->
+    <string name="perm_dialog_title">Log Okuma İzni Gerekli</string>
+    <string name="perm_grant_root">Root ile İzni Ver</string>
+    <string name="perm_granting">Veriliyor...</string>
+    <string name="perm_granted_root">İzin root ile başarıyla verildi!</string>
+    <string name="perm_grant_root_failed">Root ile izin verilemedi. ADB yöntemini deneyin.</string>
+    <string name="perm_or_adb"></string>
+    <string name="perm_adb_steps">1. Bilgisayarınıza Android Debug Bridge (ADB) kurun.\n2. Telefonunuzu USB ile bağlayın, USB Hata Ayıklama açık olsun.\n3. Aşağıdaki komutu çalıştırın:</string>
+    <string name="perm_adb_note">Bu izin uygulama kaldırılana veya fabrika sıfırlamasına kadar geçerlidir. Bir kez yeterlidir.</string>
+    <string name="perm_check_button">İzni Verdim, Kontrol Et</string>
+    <string name="perm_copied">Komut kopyalandı</string>
+    <string name="perm_granted_ok">İzin mevcut! Kayıt başlatılabilir.</string>
+    <string name="perm_not_yet">İzin henüz verilmemiş. Komutu çalıştırıp tekrar deneyin.</string>
+    <string name="perm_warning_banner">READ_LOGS izni eksik. Yalnızca bu uygulamanın logları kaydedilir.</string>
+    <string name="perm_warning_tap">İzin vermek için buraya dokun</string>
+    <string name="perm_warn_before_start">READ_LOGS izni verilmemiş. Sadece bu uygulamanın kendi logları kaydedilecek. Önce izni vermek ister misiniz?</string>
+    <string name="perm_grant_now">İzni Ver</string>
+    <string name="perm_start_anyway">Yine de Başlat</string>
+
+    <!-- İzin Yöntemleri -->
+    <string name="perm_root_method_desc">Root yöneticiniz (Magisk/KernelSU vb.) üzerinden KariD Log Manager\'a root yetkisi verin. Uygulama READ_LOGS iznini otomatik alır ve her kayıt türü sorunsuz çalışır.</string>
+    <string name="perm_system_method_title">Yöntem 2: Sistem İzni (Bazı ROM\'larda)</string>
+    <string name="perm_system_method_desc">Android 13 ve üzeri bazı cihazlarda sistem size bir izin diyaloğu gösterebilir. Aşağıdaki butona basın ve açılan pencerede "İzin ver" seçeneğini seçin.</string>
+    <string name="perm_system_rom_warning">⚠ Yalnızca bazı ROM\'larda çalışır (CrDroid, LineageOS vb.). Standart Android ve Pixel\'de desteklenmez.</string>
+    <string name="perm_adb_method_title">Yöntem 2: ADB ile İzin Ver</string>
+    <string name="btn_request_system_perm">Sistem İzni İste</string>
+    <string name="perm_system_waiting">Sistem diyaloğu açılıyor, lütfen bekleyin...</string>
+    <string name="perm_system_not_supported">Bu yöntem cihazınızda desteklenmiyor olabilir. İzin verilmediyse Root veya ADB yöntemini kullanın.</string>
+    <string name="perm_system_background_warn">UYARI: Bu yöntemle izin aldıysanız, kayıt devam ederken uygulamadan çıkmayınız.</string>
+
+    <!-- İzin Durumu -->
+    <string name="perm_status_label">READ_LOGS İzni:</string>
+    <string name="perm_status_granted_root">Verildi (Root)</string>
+    <string name="perm_status_granted_adb">Verildi (Sistem/ADB)</string>
+    <string name="perm_status_missing">Verilmedi - Kayıt Yapılamıyor</string>
+    <string name="perm_auto_granted_root">READ_LOGS izni Root ile otomatik verildi.</string>
+    <string name="perm_granting_auto">Root ile izin veriliyor...</string>
+    <string name="no_readlogs_permission">READ_LOGS izni olmadan kayıt başlatılamaz. Lütfen önce izni verin.</string>
+
+    <!-- READ_LOGS Bilgilendirme -->
+    <string name="info_readlogs_title">READ_LOGS İzni (Kayıt İçin Zorunlu)</string>
+    <string name="info_readlogs_desc">Android 4.1 ve üzeri sürümlerde diğer uygulamaların loglarını okumak için READ_LOGS izni zorunludur. Bu izin olmadan kayıt alınamaz.\n\nYöntem 1 - Root (Önerilen): Uygulamaya Magisk/KernelSU ile root yetkisi verin. İzin otomatik alınır. Kayıt sırasında logcat root olarak çalışır; en stabil yöntemdir.\n\nYöntem 2 - ADB: Bilgisayara ADB kurup USB Hata Ayıklama açık telefonla bağlayarak komut satırından izin verilebilir. Her cihazda çalışır, uygulama kaldırılana kadar geçerlidir.\n\nNot: Android 12 üzeri resmi ROM\'larda yalnızca sistem uygulamalarına verilen READ_LOGS izni, CrDroid, LineageOS gibi bazı özel ROM\'larda ADB\'ye gerek kalmadan uygulamalara verilmiştir. Bu ROM\'larda ROOT yetkisi vermeden ADB üzerinden izin verilmiş gibi kullanabilirsiniz.</string>
+    <string name="info_readlogs_root_desc">Root ile izin: Uygulamaya root yetkisi verirseniz (Magisk, KernelSU vb.) READ_LOGS izni otomatik alınır ve her kayıt türünde sorunsuz çalışır.</string>
+
+    <!-- Açılış Ekranı READ_LOGS -->
+    <string name="welcome_root_perm_title">READ_LOGS İzni (Kayıt İçin Zorunlu)</string>
+    <string name="welcome_root_perm_desc">KariD Log Manager\'ın kayıt alabilmesi için READ_LOGS izni zorunludur.\n\n• Yöntem 1 - Root (Önerilen): Root yöneticinizden (Magisk/KernelSU) uygulamaya root yetkisi verin. İzin otomatik alınır.\n• Yöntem 2 - ADB: Bilgisayar üzerinden tek seferlik komut ile verilebilir. Her cihazda çalışır.\n\nAyrıntılar için "Log Okuma İzni Gerekli" ekranına bakın.</string>
+    <string name="btn_grant_root_perm">Root ile READ_LOGS İzni Ver</string>
+    <string name="welcome_adb_fallback">Bilgisayarınıza ADB kurun. Telefonunuzda Hata Ayıklama Özelliğini açıp bilgisayarınıza bağlayın. ADB programında aşağıdaki komutu yazıp çalıştırın:</string>
+    <string name="welcome_perm_status_granted">READ_LOGS İzni: Verildi</string>
+    <string name="welcome_adb_title">ADB ile READ_LOGS İzni:</string>
+    <string name="welcome_root_step1">1 - READ_LOGS izni vermek için uygulamaya ROOT yetkisi verin.</string>
+    <string name="welcome_root_step2">2 - ADB üzerinden uygulamaya READ_LOGS izni verin.</string>
+
+    <!-- İpuçları -->
+    <string name="info_ai_data_desc">* Tum kayitlarda log dosyasinin basina cihaz bilgileri yazilir.\n* Yapay zekaya gonderilebilir maksimum log boyutu 100 KB\'dir.\n* Yapay zekaya yalnizca hafif log kayitlari gonderilebilir. Hafif kayit ile cozum bulamadiginiz sorunlari Normal veya Derin kayit ile kaydedip kendi yapay zeka uygulamalariniza sorabilirsiniz.\n* Derin kayit dosyalarinizi yalnizca guvendiginiz kisiler ile paylasin - DERIN KAYIT DOSYALARI KISISEL BILGILERI ICEREBILIR!</string>
+
+    <string name="perm_root_info_noroooted">Yöntem 1 - Root (Önerilen): Cihazınızı root yapıp uygulamamıza root yetkisi verirseniz READ_LOGS izni otomatik alınır. Bu en kolay ve en güvenilir yöntemdir.</string>
+    <string name="perm_dialog_desc">Sistem ve uygulama kayıtlarını okumak için READ_LOGS izni gereklidir. Aşağıdaki yöntemlerden size uygun olanı seçin.</string>
+    <string name="perm_root_method_title">Yöntem 1: Root Yetkisi (Önerilen)</string>
+    <string name="perm_root_not_available">Cihazınız root\'lu değil. Root yöntemi kullanılamaz. ADB yöntemini deneyin.</string>
+    <string name="welcome_rom_note">Not: Android 12 üzeri resmi ROM\'larda yalnızca sistem uygulamalarına verilen READ_LOGS izni, CrDroid, LineageOS gibi bazı özel ROM\'larda ADB\'ye gerek kalmadan uygulamalara verilmiştir. Bu ROM\'larda ROOT yetkisi vermeden ADB üzerinden izin verilmiş gibi kullanabilirsiniz. Root yetkisi yine de önerilen yöntemdir.</string>
+    <string name="welcome_perm_status_granted_root">READ_LOGS İzni: Verildi (Root ile)</string>
+    <string name="welcome_perm_status_granted_adb">READ_LOGS İzni: Verildi (ADB ile)</string>
+    <string name="welcome_perm_status_missing">READ_LOGS İzni: Verilmedi</string>
+    <string name="info_readlogs_why">Android 4.1 ve üzeri sürümlerde diğer uygulamaların loglarını okumak için READ_LOGS izni zorunludur. Bu izin olmadan yalnızca uygulamanın kendi logları kaydedilir.</string>
+    <string name="info_readlogs_root_steps">1. Cihazınızda Magisk veya KernelSU kurulu olmalıdır.\n2. KariD Log Manager uygulamasını açın.\n3. Root yöneticinizde (Magisk/KernelSU) KariD Log Manager\'ı bulun ve root yetkisi verin.\n4. Uygulama READ_LOGS iznini otomatik olarak alır. Kayıt sırasında logcat root olarak çalışır.</string>
+    <string name="info_readlogs_adb_steps">1. ADB indir:\n   https://developer.android.com/studio/releases/platform-tools\n   "platform-tools.zip" indirip bir klasöre çıkar (örn: C:\platform-tools).\n2. Telefonda USB hata ayıklamayı aç:\n   Ayarlar > Telefon hakkında > Yapı numarasına 7 kez dokun\n   Sonra: Ayarlar > Geliştirici seçenekleri > USB hata ayıklama aç.\n3. Telefonu USB ile bağla ve telefondaki izin isteğini onayla.\n4. Komut istemini aç:\n   C:\platform-tools klasöründe adres çubuğuna cmd yazıp Enter\'a bas.\n5. Aşağıdaki komutu yazıp çalıştır:</string>
+    <string name="info_readlogs_adb_command">adb shell pm grant com.karid.logmanager android.permission.READ_LOGS</string>
+    <string name="info_readlogs_rom_note">Not: Android 12 üzeri resmi ROM\'larda READ_LOGS yalnızca sistem uygulamalarına verilir. CrDroid, LineageOS gibi bazı özel ROM\'larda ise bu izin ADB\'ye gerek kalmadan uygulamalara açık bırakılmıştır. Bu ROM\'larda izni otomatik kullanabilirsiniz. Root yetkisi yine de önerilen yöntemdir.</string>
+    <string name="perm_adb_info_hint">Daha detaylı anlatım için Bilgilendirme (ℹ) bölümünü kullanın.</string>
+    <string name="info_readlogs_validity">Komut hata vermezse izin verilmiştir. Bu izin uygulama kaldırılana veya telefonu fabrika ayarlarına sıfırlamasına kadar geçerlidir.</string>
+</resources>

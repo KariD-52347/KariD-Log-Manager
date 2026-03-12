@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KariD Log Manager</string>
+
+    <!-- First Launch / Welcome -->
+    <string name="btn_lets_go">Get Started</string>
+    <string name="welcome_subtitle">Smart Log Recorder with AI Analysis</string>
+    <string name="welcome_purpose_title">What Does This App Do?</string>
+    <string name="welcome_purpose_desc">Records system logs from your Android device and analyzes errors using Gemini AI.</string>
+    <string name="welcome_logtypes_title">Log Types</string>
+    <string name="welcome_howtouse_title">How to Use</string>
+    <string name="welcome_howtouse_desc">1. First grant READ_LOGS permission (via Root or ADB).\n2. Select a recording type from the main screen and start recording.\n3. Exit the app (recording continues in background) and reproduce the issue a few times. (For example, try opening a crashing app three or four times)\n4. Stop recording - the file is saved automatically.\n5. Tap \"Ask AI About the Error\", select the log file you want to send, briefly describe your issue and send.\n6. Apply the solution steps provided by AI.</string>
+    <string name="welcome_permissions_title">Required Permissions</string>
+    <string name="welcome_permission_file_title">File Access Permission (Required)</string>
+    <string name="welcome_permission_file_desc">A folder must be selected so log files can be saved to your device. The app only accesses the folder you choose.</string>
+    <string name="welcome_permission_notif_title">Notification Permission (Required)</string>
+    <string name="welcome_permission_notif_desc">While recording runs in the background, a status notification is shown in the notification bar. You can stop the recording from there. Without notification permission, the background service cannot run.</string>
+    <string name="welcome_agree_checkbox">I have read and understood</string>
+    <string name="first_launch_title">Welcome to KariD Log Manager</string>
+    <string name="first_launch_desc">This app records system logs to help diagnose errors using AI analysis. Please select a folder to save your log files.</string>
+    <string name="btn_select_folder">Select Save Folder</string>
+    <string name="folder_selected">OK Folder Selected</string>
+    <string name="btn_file_permission">Grant File Access</string>
+    <string name="btn_notification_permission">Grant Notification Access</string>
+    <string name="permission_granted">OK Permission Granted</string>
+
+    <!-- Log Types -->
+    <string name="soft_log_title">Light Log</string>
+    <string name="soft_log_desc">Errors and warnings only. READ_LOGS permission required.</string>
+    <string name="normal_log_title">Normal Log</string>
+    <string name="normal_log_desc">Standard Logcat recording. READ_LOGS permission required.</string>
+    <string name="deep_log_title">Deep Log</string>
+    <string name="deep_log_desc">All system and kernel logs. ROOT permission required.</string>
+
+    <!-- Main Screen -->
+    <string name="btn_soft_log">Light Log</string>
+    <string name="btn_normal_log">Normal Log</string>
+    <string name="btn_deep_log">Deep Log</string>
+    <string name="btn_stop_log">Stop Recording</string>
+    <string name="btn_ask_ai">Ask AI About Error</string>
+    <string name="section_log_types">Log Types</string>
+    <string name="section_ai_history">AI HISTORY</string>
+    <string name="ai_col_problem">Problem</string>
+    <string name="ai_col_status">Status</string>
+    <string name="ai_col_answer">Answer</string>
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+
+    <!-- Status -->
+    <string name="status_idle">Idle</string>
+    <string name="status_recording">Recording...</string>
+
+    <!-- Log Messages -->
+    <string name="log_started">recording started</string>
+    <string name="log_stopped">Recording stopped and saved</string>
+    <string name="log_already_running">A recording is already in progress</string>
+    <string name="no_active_log">No active recording found</string>
+    <string name="root_required">READ_LOGS permission is required</string>
+
+    <!-- Deep Log Warning -->
+    <string name="deep_log_warning_title">Deep Log Warning</string>
+    <string name="deep_log_warning_message">Deep Log records all system and kernel logs. This may take a while. Do you want to continue?</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_cancel">Cancel</string>
+
+    <!-- Notification -->
+    <string name="notif_channel_name">Log Recording Service</string>
+    <string name="notif_channel_desc">Visible while log recording is in progress</string>
+    <string name="notif_title">Recording Log</string>
+    <string name="notif_running">active</string>
+    <string name="notif_stop_button">Stop Recording</string>
+
+    <!-- AI Popup -->
+    <string name="ai_popup_title">Ask AI About Error</string>
+    <string name="ai_problem_label">Describe your problem</string>
+    <string name="ai_problem_hint">Briefly describe the problem you experienced...</string>
+    <string name="ai_send_button">Send Error to AI</string>
+    <string name="btn_close">Close</string>
+    <string name="btn_copy">Copy</string>
+
+    <!-- AI History -->
+    <string name="ai_history_title">AI Question History</string>
+    <string name="ai_history_empty">No questions asked to AI yet</string>
+    <string name="ai_select_log_file">Select Recording File (Light logs only, Max 100 KB)</string>
+    <string name="ai_enter_problem">Please describe the problem</string>
+    <string name="ai_no_log_file">Please select a log file</string>
+    <string name="ai_file_too_large">File size exceeds the 100 KB limit!</string>
+    <string name="btn_send_to_ai">Send Error to AI</string>
+    <string name="ai_status_sending">Sending...</string>
+    <string name="ai_status_answered">Answered</string>
+    <string name="ai_status_waiting">Waiting...</string>
+    <string name="ai_status_error">Error</string>
+    <string name="ai_answer_title">AI Answer</string>
+    <string name="ai_your_problem">Your Problem:</string>
+    <string name="ai_waiting_answer">Waiting for AI answer...</string>
+    <string name="ai_view_answer">View Answer</string>
+    <string name="ai_copy">Copy</string>
+    <string name="ai_copied">Copied</string>
+
+    <!-- Log Picker -->
+    <string name="no_logs_found">No log history found. Please record a log first.</string>
+    <string name="log_file_label">Selected File:</string>
+    <string name="file_size_label">Size:</string>
+    <string name="file_too_large_warning">File exceeds the 3 MB limit!</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="theme_label">Theme:</string>
+    <string name="language_label">Language:</string>
+    <string name="root_status_label">Root Status:</string>
+    <string name="root_available">Root Available</string>
+    <string name="root_not_available">No Root</string>
+    <string name="save_folder_label">Save Folder:</string>
+    <string name="no_folder_selected">No Folder Selected</string>
+    <string name="btn_change_folder">Change Folder</string>
+    <string name="lang_change_restart">Language changed. Restarting...</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_root_status">Root Status</string>
+    <string name="settings_save_folder">Save Folder</string>
+    <string name="settings_change_folder">Change Folder</string>
+
+    <!-- Log History -->
+    <string name="log_history_title">Log History</string>
+    <string name="no_log_history">No log history found</string>
+    <string name="btn_open">Open</string>
+    <string name="btn_share">Share</string>
+    <string name="share_log">Share Log</string>
+    <string name="open_with">Open With</string>
+
+    <!-- Info Screen -->
+    <string name="info_title">About the App</string>
+    <string name="info_about_title">What is KariD Log Manager?</string>
+    <string name="info_about_desc">KariD Log Manager records system activity on your Android device so you can see exactly what happened when an error occurred. App crashing? Phone freezing? Logcat recording captures the source of these issues and AI analysis suggests a solution.</string>
+    <string name="info_purpose_title">Purpose</string>
+    <string name="info_purpose_desc">Record system logs and use AI to diagnose Android errors quickly and accurately.</string>
+    <string name="info_log_types_title">Log Types</string>
+    <string name="info_logtypes_title">Log Types</string>
+    <string name="info_logtypes_desc">Different recording modes capture different levels of data.</string>
+    <string name="info_soft_log_desc">Light recording: Records only error logs. File size is small and best suited for AI analysis.</string>
+    <string name="info_normal_log_desc">Normal Log: Standard Logcat recording. Use this to monitor detailed app behavior.</string>
+    <string name="info_deep_log_desc">Deep Log: Records all system and kernel logs, SELinux entries. Used for hardware or system-level issue detection. ROOT access required.</string>
+    <string name="info_ai_title">AI Data Usage</string>
+    <string name="info_ai_data_title">Tips &amp; Info</string>
+    <string name="info_how_to_use_title">How to Use</string>
+    <string name="info_how_to_use_desc">1. First grant READ_LOGS permission (via Root or ADB).\n2. Select a recording type from the main screen and start recording.\n3. Exit the app (recording continues in background) and reproduce the issue a few times. (For example, try opening a crashing app three or four times)\n4. Stop recording - the file is saved automatically.\n5. Tap \"Ask AI About the Error\", select the log file you want to send, briefly describe your issue and send.\n6. Apply the solution steps provided by AI.</string>
+    <string name="info_developer">Developer: KariD</string>
+
+    <!-- General -->
+    <string name="copied_to_clipboard">Copied to clipboard!</string>
+
+
+
+    <string name="ai_clear_history">Clear History</string>
+    <string name="ai_clear_history_title">Clear AI History</string>
+    <string name="ai_clear_history_confirm">All AI history will be deleted. Are you sure?</string>
+    <string name="ai_clear_history_yes">Delete</string>
+    <string name="info_table_level">Level</string>
+    <string name="info_table_light">Light</string>
+    <string name="info_table_normal">Normal</string>
+    <string name="info_table_deep">Deep</string>
+    <string name="info_table_device">Device Info</string>
+    <string name="info_table_kernel">Kernel (dmesg)</string>
+    <string name="info_table_selinux">SELinux</string>
+    <string name="info_table_root">With READ_LOGS</string>
+    <string name="perm_dialog_title">Log Read Permission Required</string>
+    <string name="perm_dialog_desc">READ_LOGS permission is required to read system and app logs. Choose one of the methods below.</string>
+    <string name="perm_grant_root">Grant Permission via Root</string>
+    <string name="perm_granting">Granting...</string>
+    <string name="perm_granted_root">Permission granted via root successfully!</string>
+    <string name="perm_grant_root_failed">Could not grant via root. Try the ADB method.</string>
+    <string name="perm_or_adb"></string>
+    <string name="perm_adb_steps">1. Install Android Debug Bridge (ADB) on your computer.\n2. Connect your phone via USB with USB Debugging enabled.\n3. Run the following command:</string>
+    <string name="perm_adb_note">This permission persists until the app is uninstalled or factory reset. Only needs to be done once.</string>
+    <string name="perm_check_button">I Granted It, Check Now</string>
+    <string name="perm_copied">Command copied</string>
+    <string name="perm_granted_ok">Permission found! Recording can begin.</string>
+    <string name="perm_not_yet">Permission not yet granted. Run the command and try again.</string>
+    <string name="perm_warning_banner">READ_LOGS permission missing. Only this apps logs will be recorded.</string>
+    <string name="perm_warning_tap">Tap here to grant permission</string>
+    <string name="perm_warn_before_start">READ_LOGS permission is not granted. Only this apps own logs will be recorded. Do you want to grant the permission first?</string>
+    <string name="perm_grant_now">Grant Permission</string>
+    <string name="perm_start_anyway">Start Anyway</string>
+
+    <string name="info_readlogs_title">READ_LOGS Permission (Required for Recording)</string>
+    <string name="info_readlogs_desc">READ_LOGS permission is required to read logs from other apps on Android 4.1+. Recording is not possible without this permission.\n\nMethod 1 - Root (Recommended): Grant root access via Magisk/KernelSU. Permission is obtained automatically. Logcat runs as root for maximum stability.\n\nMethod 2 - ADB: Connect your phone to a computer with USB Debugging enabled and run the permission command. Works on all devices, valid until the app is uninstalled.\n\nNote: On official Android 12+ ROMs, READ_LOGS is restricted to system apps only. However, some custom ROMs like CrDroid and LineageOS grant this permission to third-party apps without requiring ADB. On these ROMs you can use the app as if permission was granted via ADB, without needing ROOT access.</string>
+    <string name="welcome_root_perm_desc">KariD Log Manager requires READ_LOGS permission to record logs.\n\n• Method 1 - Root (Recommended): Grant root access via your root manager (Magisk/KernelSU). Permission is obtained automatically.\n• Method 2 - ADB: One-time command via computer. Works on all devices.\n\nSee the "Log Read Permission Required" screen for details.</string>
+    <string name="btn_grant_root_perm">Grant READ_LOGS via Root</string>
+    <string name="welcome_adb_fallback">Install ADB on your computer. Enable USB Debugging on your phone and connect it. Run the following command in ADB:</string>
+    <string name="welcome_perm_status_missing">READ_LOGS Permission: Not Granted</string>
+    <string name="perm_status_label">READ_LOGS Permission:</string>
+    <string name="perm_status_granted_root">Granted (Root)</string>
+    <string name="perm_status_granted_adb">Granted (System/ADB)</string>
+    <string name="perm_status_missing">Not Granted - Recording Unavailable</string>
+    <string name="no_readlogs_permission">READ_LOGS permission is required to start recording. Please grant the permission first.</string>
+    <string name="perm_root_method_desc">Grant root access to KariD Log Manager via your root manager (Magisk/KernelSU etc.). The app will obtain READ_LOGS permission automatically and all log types will work reliably.</string>
+    <string name="perm_adb_method_title">Method 2: Grant via ADB</string>
+
+    <string name="info_deep_root_note">READ_LOGS permission is sufficient for Light and Normal recording. ROOT access is required for the SELinux and Kernel logs captured in Deep recording.</string>
+    <string name="info_table_readlogs">READ_LOGS Perm.</string>
+    <string name="info_table_root_req">ROOT Access</string>
+    <string name="welcome_adb_title">READ_LOGS via ADB:</string>
+    <string name="welcome_root_step1">1 - Grant ROOT access to the app to provide READ_LOGS permission.</string>
+    <string name="welcome_root_step2">2 - Grant READ_LOGS permission to the app via ADB.</string>
+
+    <string name="info_ai_data_desc">* Device info is written at the top of every log file.\n* Maximum log size that can be sent to AI is 100 KB.\n* Only light log recordings can be sent to AI. For issues you could not solve with light recording, record with Normal or Deep and analyze with your own AI apps.\n* Share Deep log files only with trusted people - DEEP LOG FILES MAY CONTAIN PERSONAL INFORMATION!</string>
+    <string name="info_log_table_title">Log Level Comparison Table</string>
+    <string name="info_log_table_desc">Which log levels are recorded for each recording type?</string>
+    <string name="perm_system_method_title">Method 2: System Permission (Android 13+)</string>
+    <string name="perm_system_method_desc">On some Android 13+ devices, the system may show you a permission dialog. Tap the button below and select &quot;Allow&quot; in the dialog that appears. NOTE: This method only works on certain devices (custom ROMs like CrDroid, LineageOS). Stock Android and Google Pixel devices do not grant this permission to third-party apps.</string>
+    <string name="btn_request_system_perm">Request System Permission</string>
+    <string name="perm_system_waiting">Opening system dialog, please wait...</string>
+    <string name="perm_auto_granted_root">READ_LOGS permission granted automatically via Root.</string>
+    <string name="perm_granting_auto">Granting permission via Root...</string>
+    <string name="perm_system_not_supported">This method may not be supported on your device. If permission was not granted, use the Root or ADB method.</string>
+    <string name="perm_system_background_warn">WARNING: If you received permission via this method, do not leave the app while recording. On some devices, background recording access may be cut off.</string>
+    <string name="info_readlogs_root_desc">Root permission: If you grant root access (Magisk, KernelSU etc.), READ_LOGS is obtained automatically and works reliably for all recording types. This is the most reliable method for rooted users.</string>
+    <string name="perm_system_rom_warning">⚠ Only works on some ROMs (CrDroid, LineageOS etc.). Not supported on stock Android or Pixel.</string>
+    <string name="welcome_root_perm_title">READ_LOGS Permission (Required for Recording)</string>
+    <string name="perm_root_info_noroooted">Method 1 - Root (Recommended): If you root your device and grant root access to this app, READ_LOGS permission is obtained automatically. This is the easiest and most reliable method.</string>
+    <string name="perm_root_method_title">Method 1: Root Access (Recommended)</string>
+    <string name="perm_root_not_available">Your device is not rooted. Root method is unavailable. Please use the ADB method.</string>
+    <string name="welcome_rom_note">Note: On Android 12+ stock ROMs, READ_LOGS is restricted to system apps only. However, some custom ROMs like CrDroid and LineageOS grant this permission without requiring ADB. On these ROMs you can use the app without ROOT access, as if permission was granted via ADB. Root access is still the recommended method.</string>
+    <string name="welcome_perm_status_granted_root">READ_LOGS Permission: Granted (via Root)</string>
+    <string name="welcome_perm_status_granted_adb">READ_LOGS Permission: Granted (via ADB)</string>
+    <string name="welcome_perm_status_granted">READ_LOGS Permission: Granted</string>
+    <string name="info_readlogs_why">On Android 4.1 and above, READ_LOGS permission is required to read logs from other apps. Without this permission, only the app\'s own logs are recorded.</string>
+    <string name="info_readlogs_root_steps">1. Magisk or KernelSU must be installed on your device.\n2. Open KariD Log Manager.\n3. In your root manager (Magisk/KernelSU), find KariD Log Manager and grant root access.\n4. The app automatically obtains READ_LOGS permission. Logcat runs as root during recording.</string>
+    <string name="info_readlogs_adb_steps">1. Download ADB:\n   https://developer.android.com/studio/releases/platform-tools\n   Extract "platform-tools.zip" to a folder (e.g. C:\platform-tools).\n2. Enable USB Debugging on your phone:\n   Settings > About Phone > Tap Build Number 7 times\n   Then: Settings > Developer Options > Enable USB Debugging.\n3. Connect phone via USB and approve the connection on your phone.\n4. Open a command prompt:\n   In the C:\platform-tools folder, type cmd in the address bar and press Enter.\n5. Type and run the following command:</string>
+    <string name="info_readlogs_adb_command">adb shell pm grant com.karid.logmanager android.permission.READ_LOGS</string>
+    <string name="info_readlogs_rom_note">Note: On stock Android 12+ ROMs, READ_LOGS is restricted to system apps only. Some custom ROMs like CrDroid and LineageOS leave this permission open to third-party apps without requiring ADB. On these ROMs the permission works automatically. Root access is still the recommended method.</string>
+    <string name="perm_adb_info_hint">For detailed instructions, see the Info (ℹ) section.</string>
+    <string name="info_readlogs_validity">If the command runs without error, permission has been granted. This permission remains valid until the app is uninstalled or the phone is factory reset.</string>
+</resources>

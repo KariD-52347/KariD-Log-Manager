@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Odaklanmış: secondary rengi (kırmızı değil) -->
+    <item android:state_focused="true" android:color="?attr/colorSecondary" />
+    <!-- Hatalı: error rengi -->
+    <item android:state_activated="true" android:color="?attr/colorError" />
+    <!-- Normal: outline rengi -->
+    <item android:color="?attr/colorOutline" />
+</selector>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Ana tema: NoActionBar kullanıyoruz cünkü MainActivity kendi Toolbar'ini
+        setSupportActionBar() ile yönetiyor.
+    -->
+    <style name="Theme.KariDLogManager" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!--
+        Tam ekran dialog stili: FirstLaunchDialog, AiPopupDialog, AiAnswerDialog
+        Ana tema ile aynı Material3 parent → renk paleti tutarlı
+    -->
+    <style name="FullScreenDialogStyle" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondary">@color/secondary</item>
+    </style>
+
+    <!-- Dialog giris/cikis animasyonu -->
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+    <!--
+        Tarafsız outlined buton: dosya/bildirim izni, başlayalım gibi
+        colorPrimary (kırmızı) yerine colorOnSurface kullanır → açık/koyu temaya uyumlu
+    -->
+    <style name="Widget.App.Button.Neutral" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="strokeColor">?attr/colorOutline</item>
+        <item name="rippleColor">?attr/colorOnSurface</item>
+    </style>
+
+    <!--
+        TextInputLayout için özel stil: odak rengi colorPrimary (kırmızı) yerine
+        colorSecondary kullanır → açıklama kutularında kırmızı odak olmaz
+    -->
+    <style name="Widget.App.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_stroke_color</item>
+        <item name="hintTextColor">@color/text_input_hint_color</item>
+    </style>
+
+</resources>

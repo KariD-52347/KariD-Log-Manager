@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorSurface"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="@string/app_name"
+            app:titleTextColor="?attr/colorOnSurface" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Ana içerik -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- READ_LOGS İzin Durum Kartı -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPermBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:gravity="center_vertical">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/perm_status_label"
+                            android:textSize="11sp"
+                            android:textColor="?attr/colorOnSurfaceVariant" />
+                        <TextView
+                            android:id="@+id/tvPermStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPermAction"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/perm_warning_tap"
+                        android:textSize="11sp"
+                        android:textAllCaps="false"
+                        android:visibility="gone"
+                        app:cornerRadius="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Durum göstergesi -->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/status_idle"
+                android:textSize="13sp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                    android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:paddingBottom="12dp" />
+
+            <!-- LOG BUTONLARI BAŞLIĞI -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/section_log_types"
+                android:textSize="12sp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                    android:fontFamily="sans-serif"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                android:paddingBottom="8dp" />
+
+            <!-- SOFT LOG (Yeşil) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSoftLog"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/btn_soft_log"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                app:backgroundTint="@color/green_soft"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_soft_log"
+                app:iconGravity="textStart"
+                app:iconSize="22dp"
+                app:iconPadding="10dp" />
+
+            <!-- NORMAL LOG (Mavi) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNormalLog"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/btn_normal_log"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                app:backgroundTint="@color/blue_normal"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_normal_log"
+                app:iconGravity="textStart"
+                app:iconSize="22dp"
+                app:iconPadding="10dp" />
+
+            <!-- DEEP LOG (Sarı) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeepLog"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/btn_deep_log"
+                android:textColor="@color/deep_log_text"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                app:backgroundTint="@color/yellow_deep"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_deep_log"
+                app:iconGravity="textStart"
+                app:iconSize="22dp"
+                app:iconPadding="10dp"
+                app:iconTint="@color/deep_log_text" />
+
+            <!-- STOP LOG (Kırmızı) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStopLog"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/btn_stop_log"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:enabled="false"
+                app:backgroundTint="@color/red_stop"
+                app:cornerRadius="12dp"
+                app:icon="@drawable/ic_stop"
+                app:iconGravity="textStart"
+                app:iconSize="22dp"
+                app:iconPadding="10dp" />
+
+            <!-- AYRAÇ -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/colorOutlineVariant"
+                android:layout_marginBottom="16dp" />
+
+            <!-- HATAYI AI'YE SOR (Gradient) -->
+            <!-- ÖNEMLİ: backgroundTint="@null" olmadan MaterialButton gradient'i ezer -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAskAi"
+                android:background="@drawable/btn_ask_ai_gradient"
+                app:backgroundTint="@null"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/btn_ask_ai"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="bold"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:icon="@drawable/ic_ai_ask"
+                app:iconGravity="textStart"
+                app:iconSize="22dp"
+                app:iconPadding="10dp"
+                app:iconTint="@android:color/white"
+                app:cornerRadius="14dp" />
+
+            <!-- AI GEÇMİŞİ BAŞLIĞI -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/section_ai_history"
+                android:textSize="12sp"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                    android:fontFamily="sans-serif"
+                android:textAllCaps="true"
+                android:letterSpacing="0.1"
+                android:paddingBottom="8dp" />
+
+            <!-- AI geçmişi boşsa gösterilecek mesaj -->
+            <TextView
+                android:id="@+id/tvAiHistoryEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ai_history_empty"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:gravity="center"
+                android:padding="24dp"
+                android:visibility="visible" />
+
+            <!-- AI GEÇMİŞİ LİSTESİ -->
+            <!-- Başlık satırı -->
+            <LinearLayout
+                android:id="@+id/layoutAiHistoryHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="?attr/colorSurfaceVariant"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="6dp"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/ai_col_problem"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="@string/ai_col_status"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="@string/ai_col_answer"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnClearHistory"
+                android:textColor="?attr/colorOnSurface"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginBottom="4dp"
+                android:text="@string/ai_clear_history"
+                android:textSize="11sp"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:padding="4dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAiHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:visibility="gone" />
+
+            <!-- Alt boşluk -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

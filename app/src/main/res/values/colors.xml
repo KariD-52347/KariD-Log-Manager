@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Marka renkleri -->
+    <color name="primary">#E53935</color>
+    <color name="primary_dark">#B71C1C</color>
+    <color name="secondary">#00ACC1</color>
+
+    <!-- Log buton renkleri -->
+    <color name="green_soft">#2E7D32</color>       <!-- Soft Log -->
+    <color name="blue_normal">#1565C0</color>       <!-- Normal Log -->
+    <color name="yellow_deep">#F9A825</color>       <!-- Deep Log -->
+    <color name="red_stop">#C62828</color>          <!-- Stop Log -->
+    <color name="deep_log_text">#212121</color>     <!-- Deep log üzerindeki metin (sarı zemin) -->
+
+    <!-- Durum renkleri (AI geçmişi) -->
+    <color name="status_waiting">#F57C00</color>    <!-- Turuncu: Bekleniyor -->
+    <color name="status_answered">#2E7D32</color>   <!-- Yeşil: Cevaplandı -->
+    <color name="status_error">#C62828</color>      <!-- Kırmızı: Hata -->
+
+    <!-- UI renkleri -->
+    <color name="card_background">#F5F5F5</color>
+    <color name="divider_color">#E0E0E0</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- Gradient AI butonu renkleri -->
+    <color name="gradient_start">#7B1FA2</color>
+    <color name="gradient_end">#1976D2</color>
+    <color name="ic_launcher_background">#000000</color>
+    <color name="amber_warning">#F59E0B</color>
+    <color name="amber_warning_bg">#FFF8E6</color>
+    <color name="amber_warning_text">#92400E</color>
+</resources>

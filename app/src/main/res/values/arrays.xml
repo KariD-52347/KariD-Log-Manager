@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="theme_options">
+        <item>System Default</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
+    <string-array name="theme_options_tr">
+        <item>Sistem Temas&#305;</item>
+        <item>A&#231;&#305;k</item>
+        <item>Koyu</item>
+    </string-array>
+
+    <string-array name="language_options">
+        <item>System Default</item>
+        <item>T&#252;rk&#231;e</item>
+        <item>English</item>
+    </string-array>
+</resources>
